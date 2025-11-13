@@ -56,7 +56,7 @@ const Home = () => {
       <div>
         <h2 className="text-purple-400 text-center text-2xl font-medium">All Movies</h2>
         {loading ? (<p>Loading ...</p>) : error ? (<p className="text-red-600 font-medium ">{error}</p>) : (
-          <div className="mx-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mt-4">
+          <div className="mx-5 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mt-4">
             {movies.map((movie) => (
               <div key={movie.id}>
                 <MovieCard movie={movie} />
