@@ -1,7 +1,7 @@
 import Search from "./components/Search";
 import { useState, useEffect } from "react";
 import hero from "../public/hero-img.png";
-import MovieCard from "./components/MovieCard";
+import MovieCard, { type Movie } from "./components/MovieCard";
 import { useDebounce } from "react-use";
 
 const API_OPTIONS = {
@@ -14,7 +14,7 @@ const API_OPTIONS = {
 const Home = () => {
   const [search, setSearch] = useState<string>("");
   const [error, setError] = useState<string>("");
-  const [movies, setMovies] = useState([]);
+  const [movies, setMovies] = useState<Movie[]>([]);
   const [loading, setLoading] = useState<boolean>(false);
   const [debounceSearch, setDebounceSearch] = useState("");
 
